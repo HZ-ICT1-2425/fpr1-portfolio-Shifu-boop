@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #fff; /* White text */
+}
+.study-monitor {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr 1fr 1fr; /* Adjusted column sizes */
+    gap: 10px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.header, .cell, .input {
+    padding: 10px;
+    border: 1px solid #ffffffb2; /* Darker borders */
+    text-align: center;
+    color: #fff; /* White text */
+}
+.header {
+    background-color: #333; /* Dark grey header */
+    font-weight: bold;
+}
+.completed {
+    background-color: #388e3c; /* Dark green for sufficient */
+    color: #fff; /* White text for readability */
+}
+.incomplete {
+    background-color: #d32f2f; /* Dark red for insufficient */
+    color: #fff; /* White text for readability */
+}
+.pending {
+    background-color: #757575; /* Dark grey for pending */
+    color: #fff; /* White text for readability */
+}
+.credits-bar {
+    margin: 20px auto;
+    width: 80%;
+    background-color: #424242; /* Dark grey background for progress bar */
+    height: 25px;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    line-height: 25px; /* Vertically center the text */
+}
+.credits-progress {
+    background-color: #4caf50; /* Green progress */
+    height: 100%;
+    color: white;
+    line-height: 25px;
+    border-radius: 15px 0 0 15px;
+}
+.course-group {
+    background-color: #333; /* Darker background for course group */
+    font-weight: bold;
+    text-align: left;
+    padding-left: 20px;
+}
+.input {
+    background-color: #424242; /* Slightly lighter grey for inputs */
+}
+input {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+input[type="number"] {
+    width: auto;
+}

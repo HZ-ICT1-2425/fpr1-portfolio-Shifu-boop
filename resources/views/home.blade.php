@@ -6,7 +6,7 @@
 
     <section>
         <h2>Why Does HBO-ICT Suit Me</h2>
-        <img src="https://scontent-ams4-1.xx.fbcdn.net/v/t39.30808-6/464727375_1101904294614311_5043987865075737416_n.jpg?stp=dst-jpg_s600x600&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=r17CrZvuHFQQ7kNvgG7dEHT&_nc_zt=23&_nc_ht=scontent-ams4-1.xx&_nc_gid=As2ZLDzTzmzMPgtwIYc3_-W&oh=00_AYCLYEceBTPUNJyUMXTIf68FS_qaarGFRiEHAdcHvlkzEw&oe=672570B2"
+        <img src="{{asset('images/thinking-man.png')}}"
              class="thinking-man" alt="A man pondering about life">
         <div class="text-box">
             <p>Hello, my name is Shiven. I chose this course because I heard that software engineers earn a lot of
@@ -17,7 +17,7 @@
         </div>
         <ul class="why-it-fits">
             <li>I like building computers.</li>
-            <img src="https://scontent-ams2-1.xx.fbcdn.net/v/t39.30808-6/464830548_1101904314614309_2479520823075691359_n.jpg?stp=dst-jpg_s600x600&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=cG2mt8K2-QsQ7kNvgGwPq-B&_nc_zt=23&_nc_ht=scontent-ams2-1.xx&_nc_gid=As2ZLDzTzmzMPgtwIYc3_-W&oh=00_AYAOfetXujcIXUKgPiCae_XHbfpGneG6_B4aI9imIUmsdw&oe=672564B7"
+            <img  src="{{asset('images/IMG_20240904_152729.jpg')}}"
                  alt="A sick gaming PC" class="gaming-pc">
             <li>I am fascinated by the way computers work.</li>
             <img class="tree-displays"
