@@ -8,9 +8,9 @@ class PostSeeder extends Seeder
     public function run()
     {
         Post::create([
-            'title' => 'My First Blog Post',
-            'slug' => 'my-first-blog-post',
-            'content' => 'This is my blog post.!',
+            'title' => 'idk',
+            'slug' =>'i-d-k',
+            'content' => 'IDK',
         ]);
 
         Post::create([

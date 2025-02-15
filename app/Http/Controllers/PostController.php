@@ -7,12 +7,16 @@ use App\Models\Post;
 
 class PostController extends Controller
 {
-    public function index() {
-        $posts = Post::all();
+
+    public function index()
+    {
+        $posts = Post::latest()->get(); // Fetch all posts, newest first
         return view('blog', compact('posts'));
     }
 
-    public function show($slug) {
+    // Fetch a single blog post based on the slug
+    public function show($slug)
+    {
         $post = Post::where('slug', $slug)->firstOrFail();
         return view('post', compact('post'));
     }
