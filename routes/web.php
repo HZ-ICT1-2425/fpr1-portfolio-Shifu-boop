@@ -1,25 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\StaticContentController;
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
-
-
-Route::get('/profile', function () {
-    return view('profile');
-})->name('profile');
-
-Route::get('/faq', function () {
-    return view('faq');
-})->name('faq');
-
-Route::get('/blog', function () {
-    return view('blog');
-})->name('blog');
-
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::get('/', [StaticContentController::class, 'home'])->name('home');
+Route::get('/profile', [StaticContentController::class, 'profile'])->name('profile');
+Route::get('/faq', [StaticContentController::class, 'faq'])->name('faq');
+Route::get('/dashboard', [StaticContentController::class, 'dashboard'])->name('dashboard');
+Route::get('/blog', [PostController::class, 'index'])->name('blog');
+Route::get('/posts/{slug}', [PostController::class, 'show'])->name('post.show');
