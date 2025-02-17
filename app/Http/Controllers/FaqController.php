@@ -6,10 +6,38 @@ use Illuminate\Http\Request;
 use App\Models\Faq;
 
 class FaqController extends Controller
+{public function index()
 {
-    public function index()
+    $faqs = Faq::all();
+    return view('faqs.faq', compact('faqs'));
+}
+
+
+    public function store(Request $request)
     {
-        $faqs = Faq::all();
-        return view('faq', compact('faqs'));
+        $request->validate([
+            'question' => 'required',
+            'answer' => 'required'
+        ]);
+
+        Faq::create($request->all());
+        return redirect()->back()->with('success', 'FAQ added successfully.');
+    }
+
+    public function update(Request $request, Faq $faq)
+    {
+        $request->validate([
+            'question' => 'required',
+            'answer' => 'required'
+        ]);
+
+        $faq->update($request->all());
+        return redirect()->back()->with('success', 'FAQ updated successfully.');
+    }
+
+    public function destroy(Faq $faq)
+    {
+        $faq->delete();
+        return redirect()->back()->with('success', 'FAQ deleted successfully.');
     }
 }

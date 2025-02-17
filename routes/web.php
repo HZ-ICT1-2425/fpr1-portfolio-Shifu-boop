@@ -9,10 +9,10 @@ Route::get('/', [StaticContentController::class, 'home'])->name('home');
 Route::get('/profile', [StaticContentController::class, 'profile'])->name('profile');
 Route::get('/dashboard', [StaticContentController::class, 'dashboard'])->name('dashboard');
 
-
 Route::get('/faq', [FaqController::class, 'index'])->name('faq');
-
-// Blog Routes
+Route::post('/faq', [FaqController::class, 'store']);
+Route::put('/faq/{faq}', [FaqController::class, 'update']);
+Route::delete('/faq/{faq}', [FaqController::class, 'destroy']);
 Route::get('/blog', [PostController::class, 'index'])->name('blog');
 Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
 Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
