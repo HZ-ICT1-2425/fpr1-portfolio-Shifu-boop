@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ $title ?? 'My PCO' }}</title> {{-- Dynamic page title --}}
 
-    @vite(['/css/app.css'])
+    @vite('resources/css/app.css')
 
 
 
